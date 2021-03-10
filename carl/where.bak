@@ -1,0 +1,299 @@
+detach? 22:
+.pj
+Frame 22  TTY63  CARL[3,352477] at C22
+.o$
+!sys <xexec> <execx> <free> <pam>
+ 7  DETACHED      EXECX  156      SL      4651.72  0:00:00 OPER *+
+ 9  DETACHED      XEXEC  106      SL      4036.36  0:15:53 OPER *+
+10  DETACHED      FREE   66       SL      2044.10  0:00:00 OPER *+$
+11  DETACHED      PAM    4        SL      7079.88  0:00:00 PJ +
+11  REMCNT     1     DUMP SPOOL       PJ
+10  FREE   LOG 0     UPD  OPER
+ 7  JQUEUE SYS 1     DUMP SYS         OPER
+ 9  JQUEUE SYS 1     DUMP SYS         OPER
+!exi
+23:
+.pj
+Frame 19  TTY176  CARL[3,352477] at D23
+.o$
+!sys <xexec> <execx> <free> <pam>
+NO USER RUNNING <EXECX>
+NO USER RUNNING <FREE>
+ 4  DETACHED      XEXEC  106      SL      2364.60  0:00:21 OPER *+$
+ 6  DETACHED      PAM    4        SL      6880.53  0:00:01 PJ +
+ 6  REMCNT     1     DUMP SPOOL       PJ
+ 4  JQUEUE SYS 1     DUMP SYS         OPER
+!exi
+25:
+.pj
+Frame 23  TTY116  CARL[3,352477] at D25
+.o$
+!sys <xexec> <execx> <free> <pam>
+NO USER RUNNING <EXECX>
+NO USER RUNNING <FREE>
+ 4  DETACHED      XEXEC  120      SL      2997.60  0:00:20 OPER *+$
+ 5  DETACHED      PAM    4        SL     10616.71  0:00:00 PJ +
+ 4  JQUEUE SYS 1     DUMP SYS         OPER
+!exi
+26:
+.pj
+Frame 16  TTY146  CARL[3,352477] at C26
+.o$
+!sys <xexec> <execx> <free> <pam>
+NO USER RUNNING <EXECX>
+NO USER RUNNING <FREE>
+ 4  DETACHED      XEXEC  120      SL       834.63  0:00:20 OPER *+$
+ 9  DETACHED      PAM    4        SL      1745.00  0:00:00 PJ +
+ 4  JQUEUE SYS 1     DUMP SYS         OPER
+!exi
+27:
+.pj
+Frame 5  TTY174  CARL[3,352477] at D27
+.o$
+!sys <xexec> <execx> <free> <pam>
+NO USER RUNNING <EXECX>
+NO USER RUNNING <FREE>
+NO USER RUNNING <PAM>
+ 4  DETACHED      XEXEC  120      SL      2357.42  0:00:20 OPER *+$
+ 4  JQUEUE SYS 1     DUMP SYS         OPER
+!exi
+28:
+.pj
+Frame 1  TTY135  CARL[3,352477] at F28
+.o$
+!sys <xexec> <execx> <free> <pam>
+NO USER RUNNING <EXECX>
+NO USER RUNNING <FREE>
+ 4  DETACHED      XEXEC  120      SL       197.92  0:00:17 OPER *+$
+ 7  DETACHED      PAM    4        SL       711.43  0:00:00 PJ +
+ 4  JQUEUE SYS 1     DUMP SYS         OPER
+!exi
+29: cannot build circuit
+30:
+.pj
+Frame 8  TTY133  CARL[3,352477] at F30
+.o$
+!sys <xexec> <execx> <free> <pam>
+NO USER RUNNING <FREE>
+NO USER RUNNING <PAM>
+ 4  DETACHED      XEXEC  120 31:
+.pj
+Frame 3  TTY75  CARL[3,352477] at D31
+.o$
+!sys <xexec> <execx> <free> <pam>
+NO USER RUNNING <EXECX>
+ 1  DETACHED      FREE   66       SL         7.54  0:00:00 OPER +$
+ 4  DETACHED      XEXEC  120      SL        32.42  0:00:19 OPER +$
+ 8  DETACHED      PAM    4        SL         0.37  0:00:00 PJ +
+ 1  FREE   LOG 0     UPD  OPER
+ 4  JQUEUE SYS 1     DUMP SYS         OPER
+!exi
+33:
+.pj
+Frame 14  TTY124  CARL[3,352477] at C33
+.o$
+!sys <xexec> <execx> <free> <pam>
+NO USER RUNNING <EXECX>
+NO USER RUNNING <FREE>
+ 4  DETACHED      XEXEC  120      SL      2949.72  0:00:17 OPER *+$
+ 7  DETACHED      PAM    4        SL     31104.32  0:00:00 PJ +
+ 7  REMCNT     1     DUMP SPOOL       PJ
+ 4  JQUEUE SYS 1     DUMP SYS         OPER
+!exi
+34:
+.pj
+Frame 1  TTY176  CARL[3,352477] at D34
+.o$
+!sys <xexec> <execx> <free> <pam>
+NO USER RUNNING <EXECX>
+NO USER RUNNING <FREE>
+NO USER RUNNING <PAM>
+ 4  DETACHED      XEXEC  120      SL      2108.89  0:00:18 OPER *+$
+ 4  JQUEUE SYS 1     DUMP SYS         OPER
+!exi
+35:
+.pj
+Frame 10  TTY166  CARL[3,352477] at C35
+.o$
+!sys <xexec> <execx> <free> <pam>
+NO USER RUNNING <EXECX>
+NO USER RUNNING <FREE>
+ 4  DETACHED      XEXEC  120      SL      1218.48  0:00:19 OPER *+$
+ 6  DETACHED      PAM    4        SL      2430.82  0:00:00 PJ +
+ 6  CHANGE DAT 1     DUMP PJ
+ 4  JQUEUE SYS 1     DUMP SYS         OPER
+!exi
+37:
+.pj
+Frame 24  TTY157  CARL[3,352477] at D37
+.o$
+!sys <xexec> <execx> <free> <pam>
+NO USER RUNNING <EXECX>
+NO USER RUNNING <FREE>
+ 4  DETACHED      XEXEC  120      SL       546.41  0:00:20 OPER *+$
+ 9  DETACHED      PAM    4        SL      2020.12  0:00:00 PJ +
+ 4  JQUEUE SYS 1     DUMP SYS         OPER
+!exi
+38:
+.pj
+Frame 9  TTY121  CARL[3,352477] at F38
+.o$
+!sys <xexec> <execx> <free> <pam>
+NO USER RUNNING <EXECX>
+NO USER RUNNING <FREE>
+13  DETACHED      PAM    4        SL     15675.70  0:00:00 PJ +
+18  DETACHED      XEXEC  120      SL      3599.88  0:00:22 OPER +$
+23  DETACHED      PAM    4        SL      8459.98  0:00:00 PJ +
+23  CHANGE DAT 1     DUMP PJ
+18  JQUEUE SYS 1     DUMP SYS         OPER
+!exi
+54:
+.pj
+Frame 35  TTY173  CARL[3,352477] at D54
+.o$
+!sys <xexec> <execx> <free> <pam>
+NO USER RUNNING <XEXEC>
+NO USER RUNNING <EXECX>
+NO USER RUNNING <FREE>
+18  DETACHED      PAM    4        SL     14400.10  0:00:00 PJ +
+!exi
+55:
+.pj
+Frame 3  TTY173  CARL[3,352477] at C55
+.o$
+!sys <xexec> <execx> <free> <pam>
+NO USER RUNNING <EXECX>
+NO USER RUNNING <FREE>
+ 4  DETACHED      XEXEC  120      SL      1728.17  0:00:19 OPER *+$
+ 7  DETACHED      PAM    4        SL      5706.11  0:00:00 PJ +
+ 4  JQUEUE SYS 1     DUMP SYS         OPER
+!exi
+56:
+.pj
+Frame 3  TTY175  CARL[3,352477] at D56
+.o$
+!sys <xexec> <execx> <free> <pam>
+NO USER RUNNING <EXECX>
+NO USER RUNNING <FREE>
+ 4  DETACHED      XEXEC  120      SL      1286.65  0:00:21 OPER *+$
+ 6  DETACHED      PAM    4        SL      3113.64  0:00:00 PJ +
+ 4  JQUEUE SYS 1     DUMP SYS         OPER
+!exi
+57:
+.pj
+Frame 3  TTY136  CARL[3,352477] at C57
+.o$
+!sys <xexec> <execx> <free> <pam>
+NO USER RUNNING <EXECX>
+NO USER RUNNING <FREE>
+ 4  DETACHED      XEXEC  120      SL      1838.72  0:00:18 OPER *+$
+ 7  DETACHED      PAM    4        SL      2119.81  0:00:00 PJ +
+ 4  JQUEUE SYS 3     DUMP SYS         OPER
+!exi
+58:
+.pj
+Frame 6  TTY133  CARL[3,352477] at F58
+.o$
+!sys <xexec> <execx> <free> <pam>
+NO USER RUNNING <FREE>
+ 1  DETACHED      EXECX  156      SL       579.36  0:00:00 OPER *+$
+ 4  DETACHED      XEXEC  106      SL       446.88  0:00:14 OPER *+$
+ 5  DETACHED      PAM    6        RN      1541.83  0:00:00 PJ +
+ 5  REMCNT     1     DUMP SPOOL       PJ
+ 1  JQUEUE SYS 1     DUMP SYS         OPER
+ 4  JQUEUE SYS 1     DUMP SYS         OPER
+!exi
+62:
+.pj
+Frame 3  TTY17  CARL[3,352477] at X62
+.o$
+!sys <xexec> <execx> <free> <pam>
+NO USER RUNNING <PAM>
+ 1  DETACHED      FREE   66       TI         6.11  0:00:00 OPER +$
+ 4  DETACHED      XEXEC  118      SL        17.82  0:00:20 OPER +$
+ 5  DETACHED      EXECX  112      ^C         9.96  0:00:00 OPER +$
+ 6  DETACHED      EXECX  112      ^C         7.27  0:00:00 OPER +$
+ 6  EXECX  SAV 1     DUMP SYS         OPER
+ 5  EXECX  SAV 1     DUMP SYS         OPER
+ 1  FREE   LOG 0     UPD  WRS         OPER
+ 4  JQUEUE SYS 1     DUMP SYS         OPER
+!exi
+65:
+.pj
+Frame 8  TTY134  CARL[3,352477] at D65
+.o$
+!sys <xexec> <execx> <free> <pam>
+NO USER RUNNING <EXECX>
+NO USER RUNNING <FREE>
+ 4  DETACHED      XEXEC  106      SL       752.77  0:00:19 OPER *+$
+ 6  DETACHED      PAM    4        SL      3085.95  0:00:00 PJ +
+ 4  JQUEUE SYS 1     DUMP SYS         OPER
+!exi
+70:
+.pj
+Frame 15  TTY165  CARL[3,352477] at C70
+.o$
+!sys <xexec> <execx> <free> <pam>
+NO USER RUNNING <EXECX>
+NO USER RUNNING <FREE>
+ 4  DETACHED      XEXEC  120      SL      1127.66  0:00:31 OPER *+$
+ 8  DETACHED      PAM    4        SL      1478.34  0:00:00 PJ +
+ 4  JQUEUE SYS 1     DUMP SYS         OPER
+!exi
+72:
+.pj
+Frame 3  TTY175  CARL[3,352477] at D72
+.o$
+!sys <xexec> <execx> <free> <pam>
+NO USER RUNNING <EXECX>
+NO USER RUNNING <FREE>
+ 4  DETACHED      XEXEC  120      SL       137.52  0:00:18 OPER *+$
+ 6  DETACHED      PAM    4        SL        72.24  0:00:00 PJ +
+ 6  REMCNT     1     DUMP SPOOL       PJ
+ 4  JQUEUE SYS 1     DUMP SYS         OPER
+!exi
+74:
+.pj
+Frame 5  TTY135  CARL[3,352477] at F74
+.o$
+!sys <xexec> <execx> <free> <pam>
+NO USER RUNNING <EXECX>
+NO USER RUNNING <FREE>
+ 3  DETACHED      PAM    4        SL     79:
+.pj
+Frame 3  TTY76  CARL[3,352477] at D79
+.o$
+!sys <xexec> <execx> <free> <pam>
+NO USER RUNNING <EXECX>
+NO USER RUNNING <FREE>
+ 4  DETACHED      XEXEC  102      SL       805.50  0:00:18 OPER *+
+ 6  DETACHED      PAM    4        SL       937.73  0:00:00 PJ +
+ 4  JQUEUE SYS 1     DUMP SYS         OPER
+!exi
+95:
+.pj
+Frame 1  TTY17  CARL[3,352477] at X95
+.o$
+!sys <xexec> <execx> <free> <pam>
+NO USER RUNNING <FREE>
+NO USER RUNNING <PAM>
+ 4  DETACHED      XEXEC  106      SL      3349.71  0:06:29 OPER +
+ 5  DETACHED      EXECX  158      SL      4642.81  0:00:00 OPER +
+ 4  JQUEUE SYS 1     DUMP SYS         OPER
+ 5  JQUEUE SYS 1     DUMP SYS         OPER
+!exi
+930:
+.pj
+Frame 7  TTY14  CARL[3,352477] at X930
+.o$
+!sys <xexec> <execx> <free> <pam>
+NO USER RUNNING <FREE>
+NO USER RUNNING <PAM>
+ 1  DETACHED      XEXEC  118      SL        68.25  0:02:15 OPER +
+ 4  DETACHED      EXECX  160      SL        78.04  0:00:00 OPER +
+ 4  MIDNIT LOG 1     DUMP JMS         OPER
+ 4  MIDNIT CTL 1     DUMP JMS         OPER
+ 4  JQUEUE SYS 1     DUMP SYS         OPER
+ 1  JQUEUE SYS 1     DUMP SYS         OPER
+!exi
+  
