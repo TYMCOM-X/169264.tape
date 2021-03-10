@@ -1,0 +1,372 @@
+From: Osman Guven <osman@X930.Tymnet> 
+Date: Wed, 12 Nov 86 11:58:53 PST 
+To: Monitor Group <Osman@X930.Tymnet>, Carl A Baltrunas <carl@X930.Tymnet>, Joe
+	Smith <jms@X930.Tymnet> 
+Cc: Craig Fletcher <fletcherc@X930.Tymnet>, Dennis Coffey <dencoff@X930.Tymnet>
+	
+Subject: PAKCOP.. 
+
+
+
+
+
+
+                             M E M O R A N D U M
+
+
+                                                      TYMCOM-X SUPPORT
+
+
+
+   DATE:  11-November-1986
+
+     TO:  ALL DATA CENTERS
+
+   FROM:  Osman Guven
+
+SUBJECT:  Status of PAKCOP..
+
+--------------------------------------------------------------------
+
+     As of this memo there are two pack copy programs. PAKCOP.SAV and
+     PAKCP5.SAV.
+
+     PAKCOP.SAV is the same old pack copy which we have been using on
+     the Memorex 3675's and Ampex DM-331's. You must still use this 
+     program when you work with 3675's and DM-331's, but there have been
+     some enhancement added to it.
+
+     PAKCP5.SAV is the new version which only works with the Memorex 
+     3650 and 3652 disks which we have started to put on the PDP10's.
+
+     Operationally, procedures of both program are the same as before.
+     Only one command REFRESH, has been changed to ZFORMAT.
+
+     If a 3650/3652 pack can not be ZFORMATed on the PDP10 because of
+     a defective track, which must be done at least once when they are
+     put on the PDP10 to work with TYMCOM-X operating system, defective
+     track could be rewritten (fixed) under IBM/VM system using FIDS
+     SA (Surface Analysis). This has been allready tested and proven to work.
+
+     If there is any question feel free to give me a call at (415)794-2513
+     or send mail to user name OSMAN on PDP10' or FSC.O/GUVEN on ONTYM.
+     Thank You..
+From: Carl A Baltrunas <Carl@X930.Tymnet> 
+Date: Wed, 12 Nov 86 12:46:35 PST 
+To: Monitor Group <CARL@X930>, Osman Guven <osman@X930.Tymnet>, Joe Smith
+	<jms@X930.Tymnet> 
+Cc: Craig Fletcher <fletcherc@X930.Tymnet>, Dennis Coffey <dencoff@X930.Tymnet>
+	
+Subject: BBOARD messages. 
+
+
+Due to a limitiation in the TUMS mailing system, we cannot use the username
+BBOARD.  TUMS assumes that we are trying to send mail to the UNIX BBOARD
+system and snarfs up the mail...  sigh!
+
+I've setup a mailbox for username INFO instead.  Untested as of this moment,
+and this will only change if TUMS eats that mail also.  GRRRRRRR.
+
+/Carl
+
+Example:
+
+   .SENDMA INFO
+   Type letter:
+   New LN03 printer is up on the micro-net.  To use the automatic spooling
+   capability, simply copy the file you wish to have printed into directory
+   (LPQ) on system 930 or 62.  At the moment no checking for binary files
+   is performed, so please be careful what you copy into LPQ.
+
+      Three formats are available for printing:
+
+      Normal - Elite font, letter format, 60-61 lines by 88 characters
+               all files not listed below are considered Normal
+
+      Wide   - Compressed font, landscape format, 60-61 lines by 136 chars
+               files with the extension .LSW are printed in this format
+
+      8 LPI  - Compressed font, letter format, 80-82 lines by 100 chars
+               files with the extension .LS8 are printed in this format
+
+   If you wish normal printing of files with .LS8 and .LSW extensions, you
+   must change the extension to something else (eg. .LST) when you copy it
+   to (LPQ).   Please check to see if you are overwriting a file of the
+   same name prior to copying your files to LPQ, otherwise someone else may
+   take your printout.
+
+   /Carl
+
+From: CARL@X930.Tymnet 
+Date: Wed, 12 Nov 86 13:07:56 PST 
+To: info 
+
+   New LN03 printer is up on the micro-net.  To use the automatic spooling
+   capability, simply copy the file you wish to have printed into directory
+   (LPQ) on system 930 or 62.  At the moment no checking for binary files
+   is performed, so please be careful what you copy into LPQ.
+
+      Three formats are available for printing:
+
+      Normal - Elite font, letter format, 60-61 lines by 88 characters
+               all files not listed below are considered Normal
+
+      Wide   - Compressed font, landscape format, 60-61 lines by 136 chars
+               files with the extension .LSW are printed in this format
+
+      8 LPI  - Compressed font, letter format, 80-82 lines by 100 chars
+               files with the extension .LS8 are printed in this format
+
+   If you wish normal printing of files with .LS8 and .LSW extensions, you
+   must change the extension to something else (eg. .LST) when you copy it
+   to (LPQ).   Please check to see if you are overwriting a file of the
+   same name prior to copying your files to LPQ, otherwise someone else may
+   take your printout.
+
+   /Carl
+Received: from B39.Tymnet by X930.Tymnet; Thu, 13 Nov 86 1:32:32 PST
+Return-path: <CARL@B39.Tymnet> 
+From: CARL@B39.Tymnet 
+Date: Thu, 13 Nov 86 1:30:24 PST 
+To: wrs 
+
+Bug in LS program....
+
+  If one has UNDELETE enabled, one gets funny named .TMP files in one's
+directory... when one then runs LS to get a directory, LS seems to stop
+when it hits one of thes bad files... in any case, it doesn't list all
+of the user's files.  Even if it doesn't print the bad names, it ought to
+continue with the rest of the real files...
+
+/Carl
+From: Carl A Baltrunas <Carl@X930.Tymnet> 
+Date: Thu, 13 Nov 86 2:39:05 PST 
+To: Monitor Group <CARL@X930>, Osman Guven <osman@X930.Tymnet>, Joe Smith
+	<jms@X930.Tymnet> 
+Cc: Craig Fletcher <fletcherc@X930.Tymnet>, Dennis Coffey <dencoff@X930.Tymnet>
+	
+Subject: XEXEC 
+
+XEXEC is now running on C29, C35, B36, C55, C57, D23, D27, D34, D56, D65
+and D79.   Due to FREE, it is not running on C26, C33, C70, D25, D31, D37
+and D54.   C22 and D72 are inaccessible at the moment, so no verification
+can be made.
+
+  As it is late, I'll check the Fremont data centeres tomorrow.
+
+/Carl;
+From: Joe Smith <JMS@X930.Tymnet> 
+Date: Thu, 13 Nov 86 7:18:01 PST 
+To: Monitor Group <JMS>, Carl, Osman 
+Cc: FletcherC, DenCoff 
+Subject: EXEXEC running in Fremont Datacenter. 
+
+It is up on 28,30,38,58,74.   /JMS
+From: Joe Smith <JMS@X930.Tymnet> 
+Date: Thu, 13 Nov 86 13:24:51 PST 
+To: Monitor Group <JMS>, Carl, Osman 
+Cc: FletcherC, DenCoff 
+Subject: Node 3143 will be down sometime Friday night. 
+
+NETCON called, node 3143 is scheduled to be reloaded with a new version of
+the TYMSAT code after 10pm Friday night.  During that time, systems 62 and
+node 2770 will not be connected to TYMNET.
+
+This notification is a result of a request I made to have them ONTYME TXS.SUP
+or call me at 2512 whenever 3143 or 3146 is scheduled to be down.   /Joe
+Received: from X62.Tymnet by X930.Tymnet; Sat, 15 Nov 86 0:15:23 PST
+Return-path: <CARL@X62.Tymnet> 
+From: CARL@X62.Tymnet 
+Date: Fri, 14 Nov 86 23:41:03 PST 
+To: dencoff 
+
+Re: Modifications to the system
+
+I made some minor changes to your PRPCHG.DOC file along with one
+major revision.
+
+*** MAJOR CHANGE ***
+  :RESTART n                Not implemented.  Ignored.
+
+This is now correct!  For the sake of conversion, it is ignored for
+the moment.  Later, I may add it in when the Hold$Restart stuff is
+working the way I'd like it to work.
+
+
+XEXEC.RND/SUBMIT.DOC
+
+The CCL option replaces the TMPName option completely.  The old CCL option
+is redundant and setting the CCL name (or parameters) will flag the proper
+start condition.  If the RUN option is set and parameters are given, the
+CCL name will be setup automatically from the first 3 characters of the
+command file name if a CCL option HAS NOT been issued previously.
+
+The LOGOUT option has been added to allow a running job to log itself out
+without first halting and waiting for the job processor to log it out.
+(Waiting to be logged out hasn't really been tested fully, while programs
+such as MAILER and ONTMTP log themselves out.  This bit must be set on
+these programs, otherwise they will be marked Abort-Logout).
+
+Abort-CCL has been removed.  Apparently Abort-CCL replaced Abort-Run in
+an earlier version and Abort-Run was never re-implemented.  So, I have
+renamed Abort-CCL to Abort-Run since that is the intent, and I have added
+a new condition Abort-Logout which means the job went away without the
+job processor's knowledge.  This is now an error.!
+
+I will change the documentation to reflect these changes.
+
+Effective in SUBMIT %1(162), XEXEC %1(173), EXECX %1(174).
+Received: from X62.Tymnet by X930.Tymnet; Sat, 15 Nov 86 7:15:11 PST
+Return-path: <CARL@X62.Tymnet> 
+From: CARL@X62.Tymnet 
+Date: Sat, 15 Nov 86 4:13:03 PST 
+To: submit 
+
+Version 1(165) and some earlier
+Problem is that if you ABORT out of an insert, and possibly a modify
+then proceed to insert a new record... the old record info is still
+there... or at least some of it, eg. LOGFILE in my experience.
+
+/Carl
+Received: from X62.Tymnet by X930.Tymnet; Sat, 15 Nov 86 8:22:52 PST
+Return-path: <DENCOFF@X62.Tymnet> 
+From: Dennis Coffey Tymcom-X <DENCOFF@X62> 
+Date: Sat, 15 Nov 86 7:50:37 PST 
+To: CARL@X62.Tymnet 
+Subject: Re: "Re: Modifications to the system"... 
+In-reply-to: your message of Fri, 14 Nov 86 23:41:03 PST
+
+I like your changes!  and you're gchange the doc., ... thanks!  /D.
+From: Joe Smith <JMS@X930.Tymnet> 
+Date: Sat, 15 Nov 86 13:43:47 PST 
+To: Monitor Group <JMS>, Carl, Osman 
+Cc: FletcherC, DenCoff 
+Subject: 3650 problems. 
+
+I've fixed the APRFAT crashes, BADSAT crashes, MAPAL1 crashes, and made
+GIVPG1 be continuable.  Now we have SEAR14 crashes.  A summary of these
+problems can be found in (M33)3650.BUG.  Sigh.
+From: Joe Smith <JMS@X930.Tymnet> 
+Date: Sat, 15 Nov 86 13:46:29 PST 
+To: Monitor Group <JMS>, Carl, Osman 
+Cc: FletcherC, DenCoff 
+Subject: C22 rebuild. 
+
+15-Nov-86 11:35/Joe
+Contact:  Cupertino Operations, (408)446-7705, Fred, System 22.
+
+Problem:  Initialization failure - bad UFD.  DSKCLN not running.
+
+          Logged in over shut, found OPER.UFD unreadable, as well as M33.UFD
+          and others.  Ran TSTSUP, it reported DEVICE error while trying to
+          read page 4 of [1,1].UFD data.  PSP reported:
+
+BPA12(DSKB:220006):  SDATI(CTRL:2 DRV:H Data field ECC uncorrectable) SCONI(
+ Unrecoverable data check Count error) SLBN(CYL:102 HEAD:17 RECORD:8) SDAT:5
+ HDATAI(CTRL:2 DRV:H Data field ECC uncorrectable) HCONI( Unrecoverable data
+ check Count error) HLBN(CYL:102 HEAD:17 RECORD:8) HDEV:44
+
+Fix:      Told them to reformat BPA12 and rebuild system from ASP tapes.
+
+From: CARL@X930.Tymnet 
+Date: Sat, 15 Nov 86 20:09:34 PST 
+To: jms 
+
+re: Weird startup problem on system 72.
+
+I tried to startup my XEXEC on system 72 last night and it just kept
+sitting there without doing anything...
+
+I looked at the job with FRMDDT and it was looping in the code I wrote
+to sleep, loop back and try again inside the call to type a message to
+the CTY using the talk job SETUUO function 10.  It appears that the
+SETUUO was either failing or the CTY was being flooded with output and
+it was returning a pointer to use to continue the uuo.  I donno... I
+put a JFCL at the error address and it took off flying.
+
+I've not heard anything about 72 going down... so this behavior was most
+bewildering.  I thought you'd like to know, because I think that we need
+to address the problem of the CTY being flooded with output, such as when
+a detached job has LOGOUT on STOP set and caannot logout...  "?<cr>" is
+typed over and over again...
+
+/Carl
+Received: from D54.Tymnet by X930.Tymnet; Sat, 15 Nov 86 21:08:21 PST
+Return-path: <CARL@D54.Tymnet> 
+From: CARL@D54.Tymnet 
+Date: Sat, 15 Nov 86 23:02:00 CST 
+To: jms@x930 
+
+New bit for (PJ)JOBS.DAT...
+  bit x = this data center
+
+maybe better - bit field  (2-3 bits) with the data center number.
+thus, all programs like SUPCHK and (SPL)COPY and the like can look
+at word 1 for the host number and find that host's entry to see
+what data center this machine is in... then a sub-list can be made
+of those systems in this particular center.
+
+Then, (SPL)COPY or SUPCHK can look at only those hosts...
+
+...since you'r updating PAM...
+
+/Carl
+From: Joe Smith <JMS@X930.Tymnet> 
+Date: Sun, 16 Nov 86 4:57:52 PST 
+To: Monitor Group <JMS>, Carl, Osman 
+Cc: FletcherC, DenCoff 
+Subject: Question about REBUILD proceedure. 
+
+16-Nov-86 04:45/Joe
+Contact:  Cupertino Operations, (408)446-7705, L.T. Smith, System 22.
+Problem:  When rebuilding the system, do all the packs have to be the same?
+Answer:   ASP dumps DSKB0, then DSKB1, etc.  It does not matter if DSKB0 has
+          moved from BPA1 to BPA7.  If the system had 14 packs when ASP was
+          run, then it must have 14 packs when restoring.  The physical
+          location of the packs is irrelevant.
+
+
+From: Joe Smith <JMS@X930.Tymnet> 
+Date: Sun, 16 Nov 86 18:45:14 PST 
+To: Monitor Group <JMS>, Carl, Osman 
+Cc: FletcherC, DenCoff, William R Soley <WRS@B39.Tymnet> 
+Subject: Oper password file loses license when restoring from backup tape. 
+
+16-Nov-86 18:15/Joe
+Contact:  Cupertino Operations, (408)446-7705, Vijay, System 22.
+Problem:  Could not set license after restoring from 14th's incremental.
+Diagnosis: TITO complained about two files:
+          (SYS)DRWSPR.EPO not given license WC
+          (BOFANET)ONTYME.SAV not given license AC (SY,HF,RF,WF)
+Fix:      Ran SETE then SETLIC on those two files.  System now up.
+Note:     Carl and I have been discussing ways of giving license to TITO
+          instead of to the operators.  We need to do something about it.
+
+In this particular case, ASP restored all files with correct license.  Now if
+TITO had all the license in the world, restoring files to SYS would not lose
+license.  Giving license to TITO would be OK if
+  1) TITO threw away license if not run by OPER.
+  2) TITO threw away license if the TRANSLATE command was given.
+  3) TITO kept license only for "RESTORE ALL" and the system number in the
+     header matched the current system number.  (Operators would still need
+     do set RF on their frame to do a STORE operation.)
+
+This approach would not work if (SYS)TITO.SAV got wiped out and they had to
+run TITO from tape.  Right now, only REFLAG gives the operator license when
+running from tape.  We could make TITO use "SETE 777777,-1" to get all license
+without having to take the system down, but it may be difficult to ensure that
+only TITO gets to use it, and not some malicious program.
+
+Or we could make it a restriction that if TITO gets wiped out, they have to
+take the system down to get license from ONCE.  Then we could add a "TITO"
+command to ONCE that takes device name as an argument (such as SYS: or FTA0:,
+etc).  This command would tell ONCE to set CONSOLE-MANUAL mode, log in OPER
+(without requiring ^Z L OPER), give the process all the license in the world,
+then run TITO from the specified device.  This would avoid DDT and REFLAG and
+give them a one-shot license for restoring files to SYS.  Once SYS was
+restored and DSKCLN run, they could use the licensed copy of TITO on disk to
+restore the rest of the files.
+
+Any comments?
+                                        /JOE
+4[ã
