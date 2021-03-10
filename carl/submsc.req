@@ -1,0 +1,26 @@
+require "Misc Submit program routines" message ;
+
+external integer		! the following integers are breaks;
+	BrkChr			! holds break character     ;
+,	ToBlnk			! sp cr lf  , omit sp,  INS ;
+,	NDigit			! digits    , omit nul, XS  ;
+,	SkJunk			! a-z0-9/:<>, omit nul, IR  ;
+,	NxtWrd			! a-z0-9/:<>, omit nul, XS  ;
+,	ToDot			! .         , omit nul, INS ;
+,	LnBrk			! a-z0-9    , omit nul, XS  ;
+,	UpCase			! nul       , omit nul, XSK ;
+;
+
+external simple string  procedure LopWrd( reference string S );
+external simple string  procedure LopTo( reference string S; String Target ); 
+external simple integer procedure HowMany( string S,Target ); 
+external simple integer procedure
+  Val( string array AR; reference string S; integer ArrSize );
+external simple boolean procedure ValNum( string S );
+external simple boolean procedure ValOrd( reference string S );
+external simple integer procedure IntRead( string msg );
+external simple string procedure upper( string rawstring );
+external simple string procedure prompt( string PromptLine );
+
+require "(HELGEM)SUBMSC" library;
+
