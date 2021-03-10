@@ -1,0 +1,83 @@
+$Menu LICENSE;Various license change proposals
+*(CARL)LICENSE.NFO:DESIGN;Design of new operator license program
+*(CARL)LICENSE.NFO:SETE;Modifications to SETE
+*(CARL)LICENSE.NFO:SETLIC;Modifications to SETLIC UUO
+*(CARL)LICENSE.NFO:TABLES;License tables for ENABLE and DISABLE
+
+$Text DESIGN;Design of new operator license program
+
+SETOP Internal and External Design Information
+==============================================
+
+Record Types:
+
+    Employee Record		Description of authorized individual
+	Record Status			Status and capabilities
+	    Active,Manager,Terminated
+	Manager Number			Index to manager record
+	Employee Number			ISG Employee Number
+	User Name of employee		Assigned network username
+	Record Change Date		Date of change for this record
+	Change Audit			Who last changed this record
+
+    Oper Name Record		Description of an individual name
+	Authorized By			Who created this name
+	Activation Flags		Status and capabilities
+	    Active,Placeholder,Etc.
+	Activation Date			Start Date-Time
+	Termination Date		Stop  Data-Time
+	Oper Name			12 Character opername
+	Password			Hashed password
+	Password Change Date		Last password change date
+	Password Change Who		Who last changed it
+
+	    License			What license
+	    Passing Restrictions	What can be done with it
+		None,System
+	    Grantor Number		Who gave the license
+	    System Mask			Host mask for all authorized systems
+
+    System Record		Description of system
+	Status				State of system (in service?)
+	Host Number			Host number on Tymnet
+	Host Mask			System designator
+	    (various schemes for tracking host mask)
+	    Byte (x) Host-Rec (y) 0   lor  next-available-bit
+	    Byte (4) 1 (32) 0 ! 1B4 thru 1B35
+		allows 32 system numbers per Host-Rec
+
+$Menu SETE;Modifications to SETE
+*(CARL)LICENSE.NFO:SETE-UUO;New SETE -1 feature.
+*(CARL)LICENSE.NFO:SETE-PROGRAM;Run SETE as a monitor job
+
+$Text SETLIC;Modifications to SETLIC UUO
+
+To reduce frame license into JBTSLC instead of throwing it away.
+This will allow ENABLE and DISABLE to retrieve the previous licenses
+that have been set and enable them without running OPER again.
+
+$Text TABLES;License tables for ENABLE and DISABLE
+
+BUild the license names and bit tables into the monitor as
+    Name
+    Bit-mask
+    Bit-value
+
+to allow the monitor to set or clear specific licenses using ENABLE
+and DISABLE without running OPER again.
+
+$Text SETE-UUO;New SETE -1 feature.
+
+Add some feature to allow TITO with security restrictions to obtain all
+the license there is for all-files restores so that OPER no longer needs
+to worry about obtaining license before doing a restore.
+
+Fix TITO to only copy file-license to the tape if the user is OPER and
+the command given is a STORE ALL command?  Need to protect against any
+intelligent life forms attempting to build a trojan horse.
+
+$Text SETE-PROGRAM;Run SETE as a monitor job
+
+Put the current code for the SETE program into the monitor as a command
+which runs a monitor job instead of a program from SYS.  This is both
+for reliability and for security.
