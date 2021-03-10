@@ -1,0 +1,122 @@
+Entry
+	LicPrt		comment Print integer license as text;
+,	LicRd		comment Read text license into integer;
+,	LicOr		comment Or license with specified field;
+,	LicVal		comment Validates wants with reality;
+;
+
+Begin "License Routines"
+
+require "(SAILIB)SAIL.DEF" source!file;
+
+Define LicSiz=28;
+
+Preset!with
+    "WC","RC","OP","SY","GD","TD",
+    "ST","HF","JL","AC","XC","QM","*2","*3",
+    "RP","RF","RA","WP","WF","WA",
+    "MG","HU","CS","AP","MT","SP","RL","MN";
+Safe String Array Licenses[1:LicSiz];
+Preset!with '400000, '200000, '100000, '40000, '20000, '10000,
+	    '4000, '2000, '1000, '400, '200, '100, '40, '20,
+	    '4, '10, '14, '1, '2, '3,
+	    '1 lsh 18, '1 lsh 19, '1 lsh 20, '1 lsh 21,
+	    '1 lsh 22, '1 lsh 23, '1 lsh 24, '1 lsh 25;
+Safe Integer Array License!bits[1:LicSiz];	! Same size as Licenses;
+Preset!with '400000, '200000, '100000, '40000, '20000, '10000,
+	    '4000, '2000, '1000, '400, '200, '100, '40, '20,
+	    '14, '14, '14, '3, '3, '3,
+	    '1 lsh 18, '1 lsh 19, '1 lsh 20, '1 lsh 21,
+	    '1 lsh 22, '1 lsh 23, '1 lsh 24, '1 lsh 25;
+Safe Integer Array License!mask[1:LicSiz];	! same size as Licenses;
+
+
+internal simple string procedure LicPrt( integer License );
+begin "License printer"
+    Integer index;
+    String S;
+
+    S_ null;				! initially blank ;
+    for index_ 1 upto LicSiz		! foreach license ;
+     do if ( ( License land License!mask[ index ] ) = License!bits[ index ] )
+	 then S_ S & (if length(S) then " " else null) & Licenses[ index ];
+
+    return( S );			! return string ;
+
+end "License printer";
+
+
+internal simple integer procedure LicRd( string License );
+Begin "License reader"
+    Integer L, I, Itable, Brk;
+    String S;
+
+    setbreak( Itable_ Getbreak, " ,:;."&'11, " ,:;."&'11, "KINST" );
+
+    L _ 0;
+
+    while ( length( S_ scan( License, Itable, Brk ) ) )
+     do for I_ 1 upto LicSiz
+	 do if kequ( S, Licenses[I] )
+	     then begin
+		L_ (L land lnot( license!mask[I] )) lor
+		     ( (L land license!mask[I]) max license!bits[I] );
+		Done;
+	     end;
+
+    relbreak(Itable);
+    return( L );
+
+End "License reader";
+
+
+internal simple integer procedure LicOr( integer Lic1, Lic2 );
+begin "License or"
+    Integer NewLic, index;
+
+    NewLic_ 0;				! initially none ;
+
+    for index_ 1 upto LicSiz		! for each setting ;
+     do NewLic_ NewLic  lor
+		( ( Lic1 land License!mask[ index ] ) max
+		  ( Lic2 land License!mask[ index ] ) );
+
+    return( NewLic );
+
+end "License or";
+
+
+internal simple integer procedure LicVal( integer Have, Want );
+begin "License validate"
+    Integer NewLic, index;
+
+    NewLic_ 0;				! initially none ;
+
+    for index_ 1 upto LicSiz		! for each setting ;
+     do NewLic_ (NewLic land lnot( License!mask[ index ] )) lor
+		( if ( 0 < (Want land License!mask[ index ]) leq
+			   (Have land License!mask[ index ]) )
+		   then (NewLic land License!mask[ index ]) max
+			   (Want land License!mask[ index ])
+		   else 0 );
+
+    return( NewLic );
+
+end "License validate";
+
+
+internal simple boolean procedure LicChk( integer Have, Want );
+begin "License check"
+    Integer index;
+
+    for index_ 1 upto LicSiz		! for each setting ;
+     do if ( (Want land License!mask[ index ]) >
+	     (Have land License!mask[ index ]) )
+	then return( false );
+
+    return( true );
+
+end "License check";
+
+
+End "License Routines";
